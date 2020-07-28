@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Higgins&#39; Blog</title>
-  
-  
+  <icon>https://www.gravatar.com/avatar/e2521cbc4f9e32fbf09112a5749024b3</icon>
+  <subtitle>道生一,一生二</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Higgins995/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>Higgins</name>
-    
+    <email>higgins995@qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
