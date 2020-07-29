@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Higgins&#39; Blog</title>
+  <title>Higgins995&#39;s Blog</title>
   <icon>https://www.gravatar.com/avatar/e2521cbc4f9e32fbf09112a5749024b3</icon>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/Higgins995/Higgins995.github.io/tree/master/"/>
-  <updated>2020-06-30T04:13:39.892Z</updated>
+  <updated>2020-06-25T12:34:04.002Z</updated>
   <id>https://github.com/Higgins995/Higgins995.github.io/tree/master/</id>
   
   <author>
-    <name>Higgins</name>
+    <name>Higgins995</name>
     <email>higgins995@qq.com</email>
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://github.com/Higgins995/Higgins995.github.io/tree/master/2020/06/25/Hi/"/>
     <id>https://github.com/Higgins995/Higgins995.github.io/tree/master/2020/06/25/Hi/</id>
     <published>2020-06-25T12:34:04.002Z</published>
-    <updated>2020-06-30T04:13:39.892Z</updated>
+    <updated>2020-06-25T12:34:04.002Z</updated>
     
     <content type="html"><![CDATA[<p>这次是真的：你好！</p><a id="more"></a><p>慢慢练习使用git，加油！</p><p>这里将见证我的成长！</p>]]></content>
     
