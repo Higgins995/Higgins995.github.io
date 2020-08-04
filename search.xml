@@ -39,6 +39,17 @@
 
 			<script>
 				console.error("Error: [hexo-tag-aplayer] Meting support is disabled, cannot resolve the meting tags properly.");
+			</script>
+
+
+
+
+
+
+
+
+			<script>
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (“https://p1.music.126.net/TUGO1gz0hq_f00o4DN0ocg==/80264348833252.jpg?param=34y34”)");
 			</script>]]></content>
   </entry>
 </search>
