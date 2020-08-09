@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://higgins995.github.io/data/theme_config.yml/fan.json</loc>
+    
+    <lastmod>2020-08-09T16:37:02.834Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://higgins995.github.io/2020/06/25/hello-world/</loc>
     
     <lastmod>2020-08-09T06:47:18.502Z</lastmod>
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://higgins995.github.io/data/butterfly.json</loc>
+    <loc>https://higgins995.github.io/data/theme_config.yml/butterfly.json</loc>
     
     <lastmod>2020-08-04T03:47:03.615Z</lastmod>
     
@@ -68,6 +75,13 @@
     <loc>https://higgins995.github.io/categories/index.html</loc>
     
     <lastmod>2020-08-01T09:46:39.536Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://higgins995.github.io/data/fan.json</loc>
+    
+    <lastmod>2020-07-29T15:21:28.941Z</lastmod>
     
   </url>
   
