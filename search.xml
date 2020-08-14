@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>文章名称</title>
-    <url>/2020/06/25/Hi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
-<a id="more"></a>
-<p>慢慢练习使用git，加油！</p>
-<p>这里将见证我的成长！</p>
-]]></content>
-      <categories>
-        <category>这世界很大</category>
-      </categories>
-      <tags>
-        <tag>新手篇</tag>
-        <tag>练手</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown笔记</title>
     <url>/2020/08/08/Markdown%E7%AC%94%E8%AE%B0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>​	      自 用 的 Markdown 笔 记</p>
@@ -100,119 +84,25 @@ TEST2|TEST3               #可生成一个无框2x2表格</p>
       </tags>
   </entry>
   <entry>
-    <title>在 Linux 和 Git 中使用别名来更高效的工作</title>
-    <url>/2020/08/11/%E5%9C%A8Linux%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E6%9D%A5%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>​					 	<em><strong>Linux 和 Git 中分别设置及删除别名的方法</strong></em></p>
-<p>​		前言：今天在<a href="https://class.imooc.com/" target="_blank" rel="noopener">慕课网</a>上继续学习 Linux ，学到了，“<a href="https://www.imooc.com/video/4526" target="_blank" rel="noopener">使用别名与快捷键</a>” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令💢），敢想敢做，我马上打开电脑干了起来</p>
-<a id="more"></a> 
-<p>​</p>
-<h1>Linux 部分</h1>
-<p>​		设置别名分为两种情况：一种是临时别名，只限本次登陆使用；另一种是永久别名，可永久使用这个别名。</p>
-<p># 你都想用别名了，说明你已经掌握基本的 Linux 知识了，有些图我就不上了</p>
-<p># 这里只介绍为 linux 单个用户设置别名的方法，若想为 Linux 所有用户设置别名，请把以下所有方法（仅 Linux 部分）的 <code>~/.bashrc</code> 环境变量配置文件<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>换成 <code>/etc/profile</code> 全系统配置文件</p>
-<h2 id="在-Linux-中设置别名">在 Linux 中设置别名</h2>
-<h3 id="设置永久别名：">设置永久别名：</h3>
-<p>第一步：用 vim 打开 .bashrc 环境变量配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>vim ~&#x2F;.bashrc<br></code></pre></td></tr></table></figure>
-<p>第二步：添加alias命令格式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式:<br>alias x&#x3D;&#39;xxxx&#39;<br></code></pre></td></tr></table></figure>
-<p>​		文件自己都有实例在那了⬇️</p>
-<p><img src="https://i.loli.net/2020/08/13/C1MdeyPUN3pg5jH.jpg" alt=""></p>
-<p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令:<br>source ~&#x2F;.bashrc     #读入.bashrc文件<br><br>#或者<br>reboot				 #重启Linux<br></code></pre></td></tr></table></figure>
-<h3 id="设置临时别名：">设置临时别名：</h3>
-<p>第一步：查看要设置的别名是否已存在</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>alias<br></code></pre></td></tr></table></figure>
-<p>第二步：添加别名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式:<br><br>alias x&#x3D;&#39;xxxx&#39;          &#x2F;&#x2F;终端命令<br><br># &#96;xxxx&#96; 代表你要替换的命令， &#96;x&#96; 代表你要设置的命令别名<br></code></pre></td></tr></table></figure>
-<p>​		还是看图吧</p>
-<p><img src="https://i.loli.net/2020/08/13/mHMnQarZwzsb5kp.jpg" alt=""></p>
-<hr>
-<h2 id="删除-Linux-中的别名">删除 Linux 中的别名</h2>
-<h3 id="删除永久别名">删除永久别名</h3>
-<p>第一步：用 vim 打开 .bashrc 环境变量配置文件（一般的别名设置信息在这里面）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>vim ~&#x2F;.bashrc<br></code></pre></td></tr></table></figure>
-<p>第二步：删除所要删除的别名所在行</p>
-<p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令:<br>source ~&#x2F;.bashrc     #读入.bashrc文件<br><br>#或者<br>reboot				 #重启Linux<br></code></pre></td></tr></table></figure>
-<h3 id="删除临时别名">删除临时别名</h3>
-<p>在终端使用 unalias 命令删除：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式<br>#终端命令：<br>unalias x     &#x2F;&#x2F; x 为你要删除的别名(unalias -a 可删除所有别名)<br></code></pre></td></tr></table></figure>
-<p>--------------------------------------- Linux ---------------------------------------------------------</p>
-<h1>Git 部分</h1>
-<p># 这是我自己从 Linux 中摸索出来的</p>
-<p>#官方还有一个设置别名的方法，详细内容请看<a href="https://www.progit.cn/#_git_aliases" target="_blank" rel="noopener"> Git 别名</a></p>
-<h2 id="在-Git-中设置永久别名">在 Git 中设置永久别名</h2>
-<p>第一步：用 vi 打开 Git 的 bash.bashrc 环境变量配置文件</p>
-<p>​			运行 <code>Git Bash</code>，输入：<code>vi /etc/bash.bashrc</code><br>
-<img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813181539.png" alt=""></p>
-<p>​			命令结果:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813182626.png" alt=""></p>
-<p>第二步：添加别名</p>
-<ol>
-<li>按大写的字母 <code>O</code> 键，并输入：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式<br># xxxx 代表你要替换的命令， x 代表你要设置的命令别名<br>alias x&#x3D;&#39;xxxx&#39;<br></code></pre></td></tr></table></figure>
-<p>​			例如，我输入的是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">alias G&#x3D;&#39;hexo g&#39;<br>alias D&#x3D;&#39;hexo clean &amp;&amp; hexo g -d&#39;<br></code></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813183042.png" alt=""></p>
-<ol start="2">
-<li>按 <code>Esc</code> 键（怕出错可以多按几次），然后按 <code>:</code> 键进入底线命令模式（注意是按英文的冒号键），并输入：<code>wq</code></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185711.png" alt=""></p>
-<p>第三步：读入 bash.bashrc 文件</p>
-<p>​			输入：<code>source /etc/bash.bashrc</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185848.png" alt=""></p>
-<p>​			效果图：</p>
-<p><img src="https://i.loli.net/2020/08/13/DijdEbsrUVgePNS.jpg" alt=""></p>
-<h2 id="删除-Git-中的别名">删除 Git 中的别名</h2>
-<p>​				若想删除别名，把你在 bash.bashrc 中设置的别名所在行删除即可</p>
-<p>---------------------------------------Git ------------------------------------------------------------</p>
-<h1>附：命令生效顺序</h1>
-<p>第一顺位：用绝对或相对路径执行的命令</p>
-<p>第二顺位：别名</p>
-<p>第三顺位：Bash的内部命令</p>
-<p>第四顺位：按照 $PATH 环境变量定义的目录查找顺序找到的第一个命令</p>
-<hr>
-<p>注：以上就是本文所要讲述的内容，如有不足之处，欢迎指正。</p>
-<h1>参考：</h1>
-<p><a href="https://www.imooc.com/video/4526" target="_blank" rel="noopener">使用别名与快捷键</a></p>
-<p><a href="https://blog.csdn.net/AGNING/article/details/105902635" target="_blank" rel="noopener">Hexo设置命令别名快捷命令</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>若想了解 Linux 的环境配置文件，可前往<a href="https://blog.csdn.net/flw8840488/article/details/90513873" target="_blank" rel="noopener"> Linux 更改用户环境变量和所有用户环境变量</a> 了解 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+    <title>文章名称</title>
+    <url>/2020/06/25/Hi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
+<a id="more"></a>
+<p>慢慢练习使用git，加油！</p>
+<p>这里将见证我的成长！</p>
 ]]></content>
+      <categories>
+        <category>这世界很大</category>
+      </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>新手篇</tag>
+        <tag>练手</tag>
       </tags>
   </entry>
   <entry>
     <title>Typora 流程图</title>
     <url>/2020/08/10/Typora-%E6%B5%81%E7%A8%8B%E5%9B%BE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/06/25/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>搭建博客的过程与感受</title>
@@ -256,7 +146,7 @@ TEST2|TEST3               #可生成一个无框2x2表格</p>
 <hr>
 <p>最后推一首我喜欢的一首歌</p>
 
-    <div id="aplayer-nQQijvMH" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-STXUWfkL" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="66285" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div><hr class="footnotes-sep">
 <section class="footnotes">
@@ -268,6 +158,116 @@ TEST2|TEST3               #可生成一个无框2x2表格</p>
 ]]></content>
       <tags>
         <tag>闲聊</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/06/25/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>在 Linux 和 Git 中使用别名来更高效的工作</title>
+    <url>/2020/08/11/%E5%9C%A8Linux%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E6%9D%A5%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>​					 	<em><strong>Linux 和 Git 中分别设置及删除别名的方法</strong></em></p>
+<p>​		前言：今天在<a href="https://class.imooc.com/" target="_blank" rel="noopener">慕课网</a>上继续学习 Linux ，学到了“<a href="https://www.imooc.com/video/4526" target="_blank" rel="noopener">使用别名与快捷键</a>” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令💢），敢想敢做，我马上打开电脑干了起来</p>
+<a id="more"></a> 
+<p>​</p>
+<h1>Linux 部分</h1>
+<p>​		设置别名分为两种情况：一种是临时别名，只限本次登陆使用；另一种是永久别名，可永久使用这个别名。</p>
+<p># 你都想用别名了，说明你已经掌握基本的 Linux 知识了，有些图我就不上了</p>
+<p># 这里只介绍为 linux 单个用户设置别名的方法，若想为 Linux 所有用户设置别名，请把以下所有方法（仅 Linux 部分）的 <code>~/.bashrc</code> 环境变量配置文件<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>换成 <code>/etc/profile</code> 全系统配置文件</p>
+<h2 id="在-Linux-中设置别名">在 Linux 中设置别名</h2>
+<h3 id="设置永久别名：">设置永久别名：</h3>
+<p>第一步：用 vim 打开 .bashrc 环境变量配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>vim ~&#x2F;.bashrc<br></code></pre></td></tr></table></figure>
+<p>第二步：添加alias命令格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式:<br>alias x&#x3D;&#39;xxxx&#39;<br></code></pre></td></tr></table></figure>
+<p>​		文件自己都有实例在那了⬇️</p>
+<p><img src="https://i.loli.net/2020/08/13/C1MdeyPUN3pg5jH.jpg" alt=""></p>
+<p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令:<br>source ~&#x2F;.bashrc     #读入.bashrc文件<br><br>#或者<br>reboot				 #重启Linux<br></code></pre></td></tr></table></figure>
+<h3 id="设置临时别名：">设置临时别名：</h3>
+<p>第一步：查看要设置的别名是否已存在</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>alias<br></code></pre></td></tr></table></figure>
+<p>第二步：添加别名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式:<br><br>alias x&#x3D;&#39;xxxx&#39;          &#x2F;&#x2F;终端命令<br><br># &#96;xxxx&#96; 代表你要替换的命令， &#96;x&#96; 代表你要设置的命令别名<br></code></pre></td></tr></table></figure>
+<p>​		还是看图吧</p>
+<p><img src="https://i.loli.net/2020/08/13/mHMnQarZwzsb5kp.jpg" alt=""></p>
+<hr>
+<h2 id="删除-Linux-中的别名">删除 Linux 中的别名</h2>
+<h3 id="删除永久别名">删除永久别名</h3>
+<p>第一步：用 vim 打开 .bashrc 环境变量配置文件（一般的别名设置信息在这里面）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令：<br>vim ~&#x2F;.bashrc<br></code></pre></td></tr></table></figure>
+<p>第二步：删除所要删除的别名所在行</p>
+<p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#终端命令:<br>source ~&#x2F;.bashrc     #读入.bashrc文件<br><br>#或者<br>reboot				 #重启Linux<br></code></pre></td></tr></table></figure>
+<h3 id="删除临时别名">删除临时别名</h3>
+<p>在终端使用 unalias 命令删除：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式<br>unalias x     &#x2F;&#x2F; x 为你要删除的别名(unalias -a 可删除所有别名)<br></code></pre></td></tr></table></figure>
+<p>--------------------------------------- Linux ---------------------------------------------------------</p>
+<h1>Git 部分</h1>
+<p># 这是我自己从 Linux 中摸索出来的</p>
+<p>#官方还有一个设置别名的方法，详细内容请看<a href="https://www.progit.cn/#_git_aliases" target="_blank" rel="noopener"> Git 别名</a></p>
+<h2 id="在-Git-中设置永久别名">在 Git 中设置永久别名</h2>
+<p>第一步：用 vi 打开 Git 的 bash.bashrc 环境变量配置文件</p>
+<p>​			运行 <code>Git Bash</code>，输入：<code>vi /etc/bash.bashrc</code><br>
+<img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813181539.png" alt=""></p>
+<p>​			命令结果:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813182626.png" alt=""></p>
+<p>第二步：添加别名</p>
+<ul>
+<li>按大写的字母 <code>O</code> 键，并输入：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">#格式<br># xxxx 代表你要替换的命令， x 代表你要设置的命令别名<br>alias x&#x3D;&#39;xxxx&#39;<br></code></pre></td></tr></table></figure>
+<p>​			例如，我输入的是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">alias G&#x3D;&#39;hexo g&#39;<br>alias D&#x3D;&#39;hexo clean &amp;&amp; hexo g -d&#39;<br></code></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813183042.png" alt=""></p>
+<ul>
+<li>按 <code>Esc</code> 键（怕出错可以多按几次），然后按 <code>:</code> 键进入底线命令模式（注意是按英文的冒号键），并输入：<code>wq</code></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185711.png" alt=""></p>
+<p>第三步：读入 bash.bashrc 文件</p>
+<p>​			输入：<code>source /etc/bash.bashrc</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185848.png" alt=""></p>
+<p>​			效果图：</p>
+<p><img src="https://i.loli.net/2020/08/13/DijdEbsrUVgePNS.jpg" alt=""></p>
+<h2 id="删除-Git-中的别名">删除 Git 中的别名</h2>
+<p>​				若想删除别名，把你在 bash.bashrc 中设置的别名所在行删除即可</p>
+<p>---------------------------------------Git ------------------------------------------------------------</p>
+<h1>附：命令生效顺序</h1>
+<p>第一顺位：用绝对或相对路径执行的命令</p>
+<p>第二顺位：别名</p>
+<p>第三顺位：Bash的内部命令</p>
+<p>第四顺位：按照 $PATH 环境变量定义的目录查找顺序找到的第一个命令</p>
+<hr>
+<p>注：以上就是本文所要讲述的内容，如有不足之处，欢迎指正。</p>
+<h1>参考：</h1>
+<p><a href="https://www.imooc.com/video/4526" target="_blank" rel="noopener">使用别名与快捷键</a></p>
+<p><a href="https://blog.csdn.net/AGNING/article/details/105902635" target="_blank" rel="noopener">Hexo设置命令别名快捷命令</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>若想了解 Linux 的环境配置文件，可前往<a href="https://blog.csdn.net/flw8840488/article/details/90513873" target="_blank" rel="noopener"> Linux 更改用户环境变量和所有用户环境变量</a> 了解 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
