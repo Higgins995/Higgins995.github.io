@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>文章名称</title>
+    <url>/2020/06/25/Hi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
+<a id="more"></a>
+<p>慢慢练习使用git，加油！</p>
+<p>这里将见证我的成长！</p>
+]]></content>
+      <categories>
+        <category>这世界很大</category>
+      </categories>
+      <tags>
+        <tag>新手篇</tag>
+        <tag>练手</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>I am who I am.</title>
     <url>/2020/08/07/I-am-who-I-am/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>从2020-08-14日开始吧，有感想的时候随便写点。持续更新。。。。。</p>
@@ -170,6 +186,38 @@ cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="di
       <tags>
         <tag>Typora</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我思故我在</title>
+    <url>/2020/08/07/%E6%88%91%E6%80%9D%E6%95%85%E6%88%91%E5%9C%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这个是本人的一些感悟，很随意，如果闲得没事可以看看。持续更新。。。。。</p>
+<h1>斗地主</h1>
+<h2 id="2020-08-14">2020-08-14</h2>
+<p>​       今天生涯第一次拿到欢乐斗地主小程序，全民大奖赛（60人制）初级场第一名。能让你笑到最后的，不一定是最后的爆发，也许是你在前中期已经远远超过了别 人，就算最后连败也不要放弃，因为你只是在某些方面输了，而不是全部败北。不要全部否定自己。</p>
+<p>​		运气也是成功的一部分。有时候是主要因素，虽然这样的概率不大。</p>
+]]></content>
+      <tags>
+        <tag>闲聊</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/06/25/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Vim程序编辑器（一）</title>
@@ -362,51 +410,6 @@ cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="di
       </tags>
   </entry>
   <entry>
-    <title>我思故我在</title>
-    <url>/2020/08/07/%E6%88%91%E6%80%9D%E6%95%85%E6%88%91%E5%9C%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这个是本人的一些感悟，很随意，如果闲得没事可以看看。持续更新。。。。。</p>
-<h1>斗地主</h1>
-]]></content>
-      <tags>
-        <tag>闲聊</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章名称</title>
-    <url>/2020/06/25/Hi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
-<a id="more"></a>
-<p>慢慢练习使用git，加油！</p>
-<p>这里将见证我的成长！</p>
-]]></content>
-      <categories>
-        <category>这世界很大</category>
-      </categories>
-      <tags>
-        <tag>新手篇</tag>
-        <tag>练手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/06/25/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>搭建博客的过程与感受</title>
     <url>/2020/08/06/%E6%90%AD%E5%BB%BAHexo%E7%9A%84%E6%84%9F%E5%8F%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>时间线</h1>
@@ -448,7 +451,7 @@ cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="di
 <hr>
 <p>最后推一首我喜欢的一首歌</p>
 
-    <div id="aplayer-KXIuxGcD" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-qqvKWEev" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="66285" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div><hr class="footnotes-sep">
 <section class="footnotes">
