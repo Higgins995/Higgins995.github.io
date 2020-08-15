@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>文章名称</title>
-    <url>/2020/06/25/Hi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
-<a id="more"></a>
-<p>慢慢练习使用git，加油！</p>
-<p>这里将见证我的成长！</p>
-]]></content>
-      <categories>
-        <category>这世界很大</category>
-      </categories>
-      <tags>
-        <tag>新手篇</tag>
-        <tag>练手</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>I am who I am.</title>
     <url>/2020/08/07/I-am-who-I-am/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>从2020-08-14日开始吧，有感想的时候随便写点。持续更新。。。。。</p>
@@ -30,78 +14,6 @@
 ]]></content>
       <tags>
         <tag>闲聊</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora 流程图</title>
-    <url>/2020/08/10/Typora-%E6%B5%81%E7%A8%8B%E5%9B%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><pre class="mermaid">graph LR
-A[方形] -->B(圆角)
-    B --> C{条件a}
-    C -->|a=1| D[结果1]
-    C -->|a=2| E[结果2]
-    F[横向流程图]</pre>
-<pre class="mermaid">graph TD
-A[方形] --> B(圆角)
-    B --> C{条件a}
-    C --> |a=1| D[结果1]
-    C --> |a=2| E[结果2]
-    F[竖向流程图]</pre>
-<div id="flowchart-0" class="flow-chart"></div>
-<div id="flowchart-1" class="flow-chart"></div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs sequence">对象A-&gt;对象B: 对象B你好吗?（请求）<br>Note right of 对象B: 对象B的描述<br>Note left of 对象A: 对象A的描述(提示)<br>对象B--&gt;对象A: 我很好(响应)<br>对象A-&gt;对象B: 你真的好吗？<br></code></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs sequence">Title: 标题：复杂使用<br>对象A-&gt;对象B: 对象B你好吗?（请求）<br>Note right of 对象B: 对象B的描述<br>Note left of 对象A: 对象A的描述(提示)<br>对象B--&gt;对象A: 我很好(响应)<br>对象B-&gt;小三: 你好吗<br>小三--&gt;&gt;对象A: 对象B找我了<br>对象A-&gt;对象B: 你真的好吗？<br>Note over 小三,对象B: 我们是朋友<br>participant C<br>Note right of C: 没人陪我玩<br></code></pre></td></tr></table></figure>
-<pre class="mermaid">%% 时序图例子,-> 直线，-->虚线，->>实线箭头
-  sequenceDiagram
-    participant 张三
-    participant 李四
-    张三->王五: 王五你好吗？
-    loop 健康检查
-        王五->王五: 与疾病战斗
-    end
-    Note right of 王五: 合理 食物 <br/>看医生...
-    李四-->>张三: 很好!
-    王五->李四: 你怎么样?
-    李四-->王五: 很好!</pre>
-<pre class="mermaid">%% 语法示例
-        gantt
-        dateFormat  YYYY-MM-DD
-        title 软件开发甘特图
-        section 设计
-        需求                      :done,    des1, 2014-01-06,2014-01-08
-        原型                      :active,  des2, 2014-01-09, 3d
-        UI设计                     :         des3, after des2, 5d
-    未来任务                     :         des4, after des3, 5d
-        section 开发
-        学习准备理解需求                      :crit, done, 2014-01-06,24h
-        设计框架                             :crit, done, after des2, 2d
-        开发                                 :crit, active, 3d
-        未来任务                              :crit, 5d
-        耍                                   :2d
-        section 测试
-        功能测试                              :active, a1, after des3, 3d
-        压力测试                               :after a1  , 20h
-        测试报告                               : 48h</pre>
-<p>转载至：<a href="https://www.runoob.com/note/47651" target="_blank" rel="noopener">typora 画流程图、时序图(顺序图)、甘特图</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框
-op=>operation: 处理框
-cond=>condition: 判断框(是或否?)
-sub1=>subroutine: 子流程
-io=>inputoutput: 输入输出框
-e=>end: 结束框
-st->op->cond
-cond(yes)->io->e
-cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 开始框
-op=>operation: 处理框
-cond=>condition: 判断框(是或否?)
-sub1=>subroutine: 子流程
-io=>inputoutput: 输入输出框
-e=>end: 结束框
-st(right)->op(right)->cond
-cond(yes)->io(bottom)->e
-cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script></p>
-]]></content>
-      <tags>
-        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -188,23 +100,175 @@ TEST2|TEST3               #可生成一个2x2表格</p>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/06/25/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>Typora 流程图</title>
+    <url>/2020/08/10/Typora-%E6%B5%81%E7%A8%8B%E5%9B%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><pre class="mermaid">graph LR
+A[方形] -->B(圆角)
+    B --> C{条件a}
+    C -->|a=1| D[结果1]
+    C -->|a=2| E[结果2]
+    F[横向流程图]</pre>
+<pre class="mermaid">graph TD
+A[方形] --> B(圆角)
+    B --> C{条件a}
+    C --> |a=1| D[结果1]
+    C --> |a=2| E[结果2]
+    F[竖向流程图]</pre>
+<div id="flowchart-0" class="flow-chart"></div>
+<div id="flowchart-1" class="flow-chart"></div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs sequence">对象A-&gt;对象B: 对象B你好吗?（请求）<br>Note right of 对象B: 对象B的描述<br>Note left of 对象A: 对象A的描述(提示)<br>对象B--&gt;对象A: 我很好(响应)<br>对象A-&gt;对象B: 你真的好吗？<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs sequence">Title: 标题：复杂使用<br>对象A-&gt;对象B: 对象B你好吗?（请求）<br>Note right of 对象B: 对象B的描述<br>Note left of 对象A: 对象A的描述(提示)<br>对象B--&gt;对象A: 我很好(响应)<br>对象B-&gt;小三: 你好吗<br>小三--&gt;&gt;对象A: 对象B找我了<br>对象A-&gt;对象B: 你真的好吗？<br>Note over 小三,对象B: 我们是朋友<br>participant C<br>Note right of C: 没人陪我玩<br></code></pre></td></tr></table></figure>
+<pre class="mermaid">%% 时序图例子,-> 直线，-->虚线，->>实线箭头
+  sequenceDiagram
+    participant 张三
+    participant 李四
+    张三->王五: 王五你好吗？
+    loop 健康检查
+        王五->王五: 与疾病战斗
+    end
+    Note right of 王五: 合理 食物 <br/>看医生...
+    李四-->>张三: 很好!
+    王五->李四: 你怎么样?
+    李四-->王五: 很好!</pre>
+<pre class="mermaid">%% 语法示例
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h</pre>
+<p>转载自：<a href="https://www.runoob.com/note/47651" target="_blank" rel="noopener">typora 画流程图、时序图(顺序图)、甘特图</a><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st->op->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st(right)->op(right)->cond
+cond(yes)->io(bottom)->e
+cond(no)->sub1(right)->op</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script></p>
 ]]></content>
+      <tags>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim程序编辑器（一）</title>
+    <url>/2020/08/15/Vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>简介：Vim是vi的高级版，它相比于Vi，不但可以用不同的颜色显示文字内容，还能够进行许多的程序编辑功能。可以将 Vim 视为一种程序编辑器。Vi 的命令对于 Vim 同样适用。</p>
+<p>&lt;!  – more –&gt;</p>
+<h1>Vim 的三种模式</h1>
+<h2 id="一-命令模式">一.命令模式</h2>
+<blockquote>
+<p>功能：可进行光标的移动、文本的复制粘贴、查找文本中的某些关键字、删除文本部分内容、块的选择等</p>
+</blockquote>
+<h3 id="进入模式的方式：">进入模式的方式：</h3>
+<ol>
+<li>
+<p>在提示符后用 vi xxx   进入 vi         // xxx 为你要打开或者新建的文件名</p>
+</li>
+<li>
+<p>在 <abbr title='下面会讲到'> 编辑模式和底线命令模式 </abbr>时，按 <code>Esc</code> 退出到命令模式</p>
+</li>
+</ol>
+<h3 id="常用按键：">常用按键：</h3>
+<ol>
+<li>
+<p>光标的移动：</p>
+<blockquote>
+<p>注意：</p>
+<p>1.下面所说的<strong>行</strong>是一个回车键与下一个回车键之间的整个内容为一行，不是我们肉眼所看到的真实的<strong>行</strong>，如果分不清可在命令模式下输入 <code>:set nu</code> 使得文本显示行号</p>
+<p>2.以下内容没有写在代码框里的 <strong>N</strong> 是数字 **N **</p>
+</blockquote>
+<p><code>h</code>键或者方向 <code>⬅</code> 键 ：向左移动</p>
+<p><code>j</code> 键或者方向 <code>⬇</code>  键： 向下移动</p>
+<p><code>k</code> 键或者方向 <code>⬆</code>  键：向上移动</p>
+<p><code>l</code> 键或者方向 <code> ➡</code> 键：向右移动</p>
+<p>//高阶：向某个方向移动N行，例如向下移动30行：按<code>30j</code>或者 <code>30⬇</code> 即可</p>
+<p><code>Ctrl</code> + <code>f</code> 键或者 <code>Page Down</code> 键：屏幕向下移动一页</p>
+<p><code>Ctrl</code> + <code>b</code> 键或者   <code>Page Up</code>   键：屏幕向上移动一页</p>
+<p><code>Ctrl</code> + <code>d</code> 键：屏幕向下移动半页</p>
+<p><code>Ctrl</code> + <code>u</code> 键：屏幕向上移动半页</p>
+<p><code>+</code> 键：光标移动到非空格符的下一行</p>
+<p><code>-</code> 键：光标移动到非空格符的上一行</p>
+<p>N ＋ <code>空格</code> 键：光标会向后移动到（若当前光标所在列为第 n 列）第 n+N 列</p>
+<p><code>0</code> 或者 <code>Home</code> 键：光标移动到当前所在行的第一列</p>
+<p><code>$</code> 或者  <code>End</code>  键：光标移动到当前所在行的最后一列</p>
+<p><code>H</code> 键：光标移动到当前屏幕上显示的最上方的那一行的第一列</p>
+<p><code>M</code> 键：光标移动到当前屏幕上显示的中间一行的第一列</p>
+<p><code>L</code> 键：光标移动到当前屏幕上显示的最下方的那一行的第一列</p>
+<p><code>G</code> 键：光标移动到文本的最后一行的第一个非空格字符</p>
+<p>N + <code>G</code> 键：光标移动到文本的第 N 行的第一个非空格字符</p>
+<p><code>g</code>+<code>g</code> 键：光标移动到文本的第一行的第一个非空字符，相当于 <code>1</code> + <code>G</code> 组合键</p>
+<p>N + <code>Enter</code> 键：光标向下移动到（若当前光标所在行为第 n 行）n + N 行的第一个非空格字符</p>
+</li>
+<li>
+<p>字符串的查找与替换<br>
+<code>/word</code> ：向下查找 <code>word</code> 字符串，光标停留在光标以下部分找到的第一个  <code>word</code></p>
+<p><code>?word</code> ：向上查找 <code>word</code> 字符串，光标停留在光标以上部分找到的第一个  <code>word</code></p>
+</li>
+<li>
+<p>文本部分内容的删除及复制和粘贴</p>
+<p><code>x</code> 键：删除光标所占的字符</p>
+<p><code>X</code> 键：删除光标的前一个字符</p>
+<p>N + <code>x</code> 键：从当前向后删除 N 个字符</p>
+<p><code>dd</code> ：删除光标所在行</p>
+<p>N + <code>dd</code> ：删除从光标所在行向下的 N 行</p>
+<p>。。。。。后续补充</p>
+</li>
+</ol>
+<h2 id="编辑模式">编辑模式</h2>
+<blockquote>
+<p>功能：编辑文本</p>
+</blockquote>
+<h3 id="进入模式的方式：-v2">进入模式的方式：</h3>
+<p>在命令模式中按 <code>i</code> 、<code>I</code> 、<code>a</code>、<code>A</code>、<code>o</code>、<code>O</code>、<code>r</code>、<code>R</code> 中一个键即可进入</p>
+<h3 id="常用按键：-v2">常用按键：</h3>
+<p><code>i</code> 键：从当前所占字符前开始插入字符</p>
+<p><code>a</code> 键：从当前所占字符后开始插入字符</p>
+<p><code>o</code> 键：在当前所在行的下一行插入一行空白行</p>
+<p><code>I</code> 键：在光标所在行的第一个非空格字符前开始插入字符</p>
+<p><code>A</code> 键：在光标所在行的最后一个字符后开始插入字符</p>
+<p><code>O</code> 键：在当前所在行的上一行插入一行空白行</p>
+<h2 id="底线命令模式">底线命令模式</h2>
+<blockquote>
+<p>功能：对 vi 进行操作</p>
+</blockquote>
+<h3 id="进入模式的方法：">进入模式的方法：</h3>
+<ol>
+<li>在命令模式下按 <code>:</code>  键</li>
+<li>在命令模式下按 <code>/</code>  键</li>
+<li>在命令模式下按 <code>？</code>  键</li>
+</ol>
+<h3 id="常用命令：">常用命令：</h3>
+<p><code>wq</code> ：保存文本并退出</p>
+<p><code>q!</code> ：不保存文本并退出</p>
+<p><code>set nu</code> ：显示文本行号</p>
+<p><code>set nonu</code> ：不显示行号</p>
+<p>参考：《鸟哥的私房菜》第三版</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>在 Linux 和 Git 中使用别名来更高效的工作</title>
@@ -298,6 +362,51 @@ TEST2|TEST3               #可生成一个2x2表格</p>
       </tags>
   </entry>
   <entry>
+    <title>我思故我在</title>
+    <url>/2020/08/07/%E6%88%91%E6%80%9D%E6%95%85%E6%88%91%E5%9C%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这个是本人的一些感悟，很随意，如果闲得没事可以看看。持续更新。。。。。</p>
+<h1>斗地主</h1>
+]]></content>
+      <tags>
+        <tag>闲聊</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章名称</title>
+    <url>/2020/06/25/Hi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这次是真的：你好！</p>
+<a id="more"></a>
+<p>慢慢练习使用git，加油！</p>
+<p>这里将见证我的成长！</p>
+]]></content>
+      <categories>
+        <category>这世界很大</category>
+      </categories>
+      <tags>
+        <tag>新手篇</tag>
+        <tag>练手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/06/25/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>搭建博客的过程与感受</title>
     <url>/2020/08/06/%E6%90%AD%E5%BB%BAHexo%E7%9A%84%E6%84%9F%E5%8F%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1>时间线</h1>
@@ -339,7 +448,7 @@ TEST2|TEST3               #可生成一个2x2表格</p>
 <hr>
 <p>最后推一首我喜欢的一首歌</p>
 
-    <div id="aplayer-wYDfpiMk" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-KXIuxGcD" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="66285" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"
     ></div><hr class="footnotes-sep">
 <section class="footnotes">
@@ -348,16 +457,6 @@ TEST2|TEST3               #可生成一个2x2表格</p>
 </li>
 </ol>
 </section>
-]]></content>
-      <tags>
-        <tag>闲聊</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我思故我在</title>
-    <url>/2020/08/07/%E6%88%91%E6%80%9D%E6%95%85%E6%88%91%E5%9C%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这个是本人的一些感悟，很随意，如果闲得没事可以看看。持续更新。。。。。</p>
-<h1>斗地主</h1>
 ]]></content>
       <tags>
         <tag>闲聊</tag>

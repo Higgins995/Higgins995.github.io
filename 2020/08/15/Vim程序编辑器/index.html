@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;zh-TW&quot;,&quot;default&quot;]"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Vim程序编辑器（一）"><meta name="keywords" content="Linux"><meta name="author" content="Higgins995,undefined"><meta name="copyright" content="Higgins995"><title>Vim程序编辑器（一）【Higgins995's Blog】</title><link rel="stylesheet" href="../../../../css/fan.css"><link rel="stylesheet" href="../../../../css/thirdparty/jquery.mCustomScrollbar.min.css"><link rel="stylesheet" href="../../../../https:/imsun.github.io/gitment/style/default.css"><link rel="icon" href="../../../../https:/i.loli.net/2020/07/31/QLmPF47aCS8sYGf.jpg"><!-- script(src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")--><script src="../../../../js/mathjax/mathjax.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+});
+</script><script>var isPassword = '' || false;
+if (isPassword) {
+    if (prompt('请输入文章密码') !== '') {
+        alert('密码错误！');
+        history.back();
+    }
+}</script><script>window.GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  gitment: {},
+  valine: {"appId":"m2AG1yLHc1qVjBlGFD9902Os-MdYXbMMI","appKey":"v6s4m9ElTd5XsjaYxWazWgMu","placeholder":"天青色等烟雨，而我在等你","path":"window.location.pathname","enableQQ":false,"visitor":true},
+}</script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="atom.xml" title="Higgins995's Blog" type="application/atom+xml">
+</head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Vim 的三种模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-命令模式"><span class="toc-number">1.1.</span> <span class="toc-text">一.命令模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进入模式的方式："><span class="toc-number">1.1.1.</span> <span class="toc-text">进入模式的方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用按键："><span class="toc-number">1.1.2.</span> <span class="toc-text">常用按键：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑模式"><span class="toc-number">1.2.</span> <span class="toc-text">编辑模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进入模式的方式：-v2"><span class="toc-number">1.2.1.</span> <span class="toc-text">进入模式的方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用按键：-v2"><span class="toc-number">1.2.2.</span> <span class="toc-text">常用按键：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#底线命令模式"><span class="toc-number">1.3.</span> <span class="toc-text">底线命令模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#进入模式的方法："><span class="toc-number">1.3.1.</span> <span class="toc-text">进入模式的方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令："><span class="toc-number">1.3.2.</span> <span class="toc-text">常用命令：</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="https://i.loli.net/2020/07/31/QLmPF47aCS8sYGf.jpg"></div><div class="author-info-name">Higgins995</div><div class="author-info-description">我思故我在</div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/higgins995" target="_blank">GitHub<i class="icon-dot bg-color9"></i></a><a class="links-button button-hover" href="mailto:higgins995@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color3"></i></a><a class="links-button button-hover" href="tencent://message/?uin=1156550389&amp;Site=&amp;Menu=yes" target="_blank">QQ<i class="icon-dot bg-color3"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="../../../../archives"><span class="pull-top">日志</span><span class="pull-bottom">9</span></a><a class="author-info-articles-tags article-meta" href="../../../../tags"><span class="pull-top">标签</span><span class="pull-bottom">6</span></a><a class="author-info-articles-categories article-meta" href="../../../../categories"><span class="pull-top">分类</span><span class="pull-bottom">1</span></a></div><div class="friend-link"><a class="friend-link-text" href="https://github.com/higgins995" target="_blank">Higgins995:未曾见过的山海</a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/tags">标签</a><a class="menu-item" href="/categories">分类</a><a class="menu-item" href="/archives">归档</a><a class="menu-item" href="/playlist">音乐</a><a class="menu-item" href="/link">友链</a><a class="menu-item" href="/about">关于</a></nav><div class="right-info"><a class="title-name" href="/">Higgins995's Blog</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">Vim程序编辑器（一）</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2020-08-15 | 更新于 2020-08-15</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"></div><div class="button-hover tags"><i class="fa fa-tag article-icon" aria-hidden="true"></i><a class="link-a" href="../../../../tags/Linux/">Linux</a></div></div></div><div class="main-content"><p>简介：Vim是vi的高级版，它相比于Vi，不但可以用不同的颜色显示文字内容，还能够进行许多的程序编辑功能。可以将 Vim 视为一种程序编辑器。Vi 的命令对于 Vim 同样适用。</p>
+<p>&lt;!  – more –&gt;</p>
+<h1>Vim 的三种模式</h1>
+<h2 id="一-命令模式">一.命令模式</h2>
+<blockquote>
+<p>功能：可进行光标的移动、文本的复制粘贴、查找文本中的某些关键字、删除文本部分内容、块的选择等</p>
+</blockquote>
+<h3 id="进入模式的方式：">进入模式的方式：</h3>
+<ol>
+<li>
+<p>在提示符后用 vi xxx   进入 vi         // xxx 为你要打开或者新建的文件名</p>
+</li>
+<li>
+<p>在 <abbr title='下面会讲到'> 编辑模式和底线命令模式 </abbr>时，按 <code>Esc</code> 退出到命令模式</p>
+</li>
+</ol>
+<h3 id="常用按键：">常用按键：</h3>
+<ol>
+<li>
+<p>光标的移动：</p>
+<blockquote>
+<p>注意：</p>
+<p>1.下面所说的<strong>行</strong>是一个回车键与下一个回车键之间的整个内容为一行，不是我们肉眼所看到的真实的<strong>行</strong>，如果分不清可在命令模式下输入 <code>:set nu</code> 使得文本显示行号</p>
+<p>2.以下内容没有写在代码框里的 <strong>N</strong> 是数字 **N **</p>
+</blockquote>
+<p><code>h</code>键或者方向 <code>⬅</code> 键 ：向左移动</p>
+<p><code>j</code> 键或者方向 <code>⬇</code>  键： 向下移动</p>
+<p><code>k</code> 键或者方向 <code>⬆</code>  键：向上移动</p>
+<p><code>l</code> 键或者方向 <code> ➡</code> 键：向右移动</p>
+<p>//高阶：向某个方向移动N行，例如向下移动30行：按<code>30j</code>或者 <code>30⬇</code> 即可</p>
+<p><code>Ctrl</code> + <code>f</code> 键或者 <code>Page Down</code> 键：屏幕向下移动一页</p>
+<p><code>Ctrl</code> + <code>b</code> 键或者   <code>Page Up</code>   键：屏幕向上移动一页</p>
+<p><code>Ctrl</code> + <code>d</code> 键：屏幕向下移动半页</p>
+<p><code>Ctrl</code> + <code>u</code> 键：屏幕向上移动半页</p>
+<p><code>+</code> 键：光标移动到非空格符的下一行</p>
+<p><code>-</code> 键：光标移动到非空格符的上一行</p>
+<p>N ＋ <code>空格</code> 键：光标会向后移动到（若当前光标所在列为第 n 列）第 n+N 列</p>
+<p><code>0</code> 或者 <code>Home</code> 键：光标移动到当前所在行的第一列</p>
+<p><code>$</code> 或者  <code>End</code>  键：光标移动到当前所在行的最后一列</p>
+<p><code>H</code> 键：光标移动到当前屏幕上显示的最上方的那一行的第一列</p>
+<p><code>M</code> 键：光标移动到当前屏幕上显示的中间一行的第一列</p>
+<p><code>L</code> 键：光标移动到当前屏幕上显示的最下方的那一行的第一列</p>
+<p><code>G</code> 键：光标移动到文本的最后一行的第一个非空格字符</p>
+<p>N + <code>G</code> 键：光标移动到文本的第 N 行的第一个非空格字符</p>
+<p><code>g</code>+<code>g</code> 键：光标移动到文本的第一行的第一个非空字符，相当于 <code>1</code> + <code>G</code> 组合键</p>
+<p>N + <code>Enter</code> 键：光标向下移动到（若当前光标所在行为第 n 行）n + N 行的第一个非空格字符</p>
+</li>
+<li>
+<p>字符串的查找与替换<br>
+<code>/word</code> ：向下查找 <code>word</code> 字符串，光标停留在光标以下部分找到的第一个  <code>word</code></p>
+<p><code>?word</code> ：向上查找 <code>word</code> 字符串，光标停留在光标以上部分找到的第一个  <code>word</code></p>
+</li>
+<li>
+<p>文本部分内容的删除及复制和粘贴</p>
+<p><code>x</code> 键：删除光标所占的字符</p>
+<p><code>X</code> 键：删除光标的前一个字符</p>
+<p>N + <code>x</code> 键：从当前向后删除 N 个字符</p>
+<p><code>dd</code> ：删除光标所在行</p>
+<p>N + <code>dd</code> ：删除从光标所在行向下的 N 行</p>
+<p>。。。。。后续补充</p>
+</li>
+</ol>
+<h2 id="编辑模式">编辑模式</h2>
+<blockquote>
+<p>功能：编辑文本</p>
+</blockquote>
+<h3 id="进入模式的方式：-v2">进入模式的方式：</h3>
+<p>在命令模式中按 <code>i</code> 、<code>I</code> 、<code>a</code>、<code>A</code>、<code>o</code>、<code>O</code>、<code>r</code>、<code>R</code> 中一个键即可进入</p>
+<h3 id="常用按键：-v2">常用按键：</h3>
+<p><code>i</code> 键：从当前所占字符前开始插入字符</p>
+<p><code>a</code> 键：从当前所占字符后开始插入字符</p>
+<p><code>o</code> 键：在当前所在行的下一行插入一行空白行</p>
+<p><code>I</code> 键：在光标所在行的第一个非空格字符前开始插入字符</p>
+<p><code>A</code> 键：在光标所在行的最后一个字符后开始插入字符</p>
+<p><code>O</code> 键：在当前所在行的上一行插入一行空白行</p>
+<h2 id="底线命令模式">底线命令模式</h2>
+<blockquote>
+<p>功能：对 vi 进行操作</p>
+</blockquote>
+<h3 id="进入模式的方法：">进入模式的方法：</h3>
+<ol>
+<li>在命令模式下按 <code>:</code>  键</li>
+<li>在命令模式下按 <code>/</code>  键</li>
+<li>在命令模式下按 <code>？</code>  键</li>
+</ol>
+<h3 id="常用命令：">常用命令：</h3>
+<p><code>wq</code> ：保存文本并退出</p>
+<p><code>q!</code> ：不保存文本并退出</p>
+<p><code>set nu</code> ：显示文本行号</p>
+<p><code>set nonu</code> ：不显示行号</p>
+<p>参考：《鸟哥的私房菜》第三版</p>
+</div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Higgins995</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="../../../../https:/higgins995.github.io/2020/08/15/Vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/">https://higgins995.github.io/2020/08/15/Vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://higgins995.github.io">Higgins995's Blog</a>！</span></div></div><div class="post-copyright valine" id="comments-container"><script src="../../../../unpkg.com/valine@1.4.14/dist/Valine.min.js"></script><script>let arr = location.href.split('/#more')[0].split('/');
+let title = arr[arr.length - 1];
+if (title === '') {
+    title = arr[arr.length - 2];
+}
+var flag = false;
+var gitFun = function () {
+    try {
+        var valineObj = window.GLOBAL_CONFIG.valine;
+        new Valine({
+            el: "#comments-container",
+            ...valineObj
+        });
+        flag = true;
+    } catch (e) {
+        flag = false;
+    }
+}
+var setIn = setInterval(() => {
+    if (!flag) {
+        gitFun();
+    } else {
+        clearInterval(setIn);
+    }
+}, 200);</script></div></article><div id="pagination"><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="../../11/%E5%9C%A8Linux%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E6%9D%A5%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C/"><span>在 Linux 和 Git 中使用别名来更高效的工作</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2020 By Higgins995</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="../../../../js/copy.js"></script><!--script(src=url)--></body></html>
