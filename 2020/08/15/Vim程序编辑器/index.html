@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Vim程序编辑器（一） - Higgins995</title>
+
+  
+    <meta name="description" content="简介：Vim是vi的高级版，它相比于Vi，不但可以用不同的颜色显示文字内容，还能够进行许多的程序编辑功能。可以将 Vim 视为一种程序编辑器。Vi 的命令对于 Vim 同样适用。 &lt;!  – more –&gt; Vim 的三种模式一.命令模式  可执行操作：可进行光标的移动、文本的复制粘贴、查找文本中的某些关键字、删除文本部分内容、块的选择等  进入模式的方式： 在提示符后用 Vim xx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim程序编辑器（一）">
+<meta property="og:url" content="http://www.higgins995.top/2020/08/15/Vim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/index.html">
+<meta property="og:site_name" content="Higgins995">
+<meta property="og:description" content="简介：Vim是vi的高级版，它相比于Vi，不但可以用不同的颜色显示文字内容，还能够进行许多的程序编辑功能。可以将 Vim 视为一种程序编辑器。Vi 的命令对于 Vim 同样适用。 &lt;!  – more –&gt; Vim 的三种模式一.命令模式  可执行操作：可进行光标的移动、文本的复制粘贴、查找文本中的某些关键字、删除文本部分内容、块的选择等  进入模式的方式： 在提示符后用 Vim xx">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-15T07:42:31.000Z">
+<meta property="article:modified_time" content="2020-10-23T00:55:04.679Z">
+<meta property="article:author" content="Higgins995">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//ICO/school.ico">
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//WebSite/profile.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Higgins995</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/more/">更多</a></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">一.命令模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-text">进入模式的方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%89%E9%94%AE%EF%BC%9A"><span class="toc-text">常用按键：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">编辑模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9A-1"><span class="toc-text">进入模式的方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%89%E9%94%AE%EF%BC%9A-1"><span class="toc-text">常用按键：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%95%E7%BA%BF%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">底线命令模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">进入模式的方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-text">常用命令：</span></a></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-08-15T07:42:31.000Z">2020-08-15</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Vim程序编辑器（一）</span></h1>
+<p>简介：Vim是vi的高级版，它相比于Vi，不但可以用不同的颜色显示文字内容，还能够进行许多的程序编辑功能。可以将 Vim 视为一种程序编辑器。Vi 的命令对于 Vim 同样适用。</p>
+<p>&lt;!  – more –&gt;</p>
+<h1 id="Vim-的三种模式"><a href="#Vim-的三种模式" class="headerlink" title="Vim 的三种模式"></a>Vim 的三种模式</h1><h2 id="一-命令模式"><a href="#一-命令模式" class="headerlink" title="一.命令模式"></a>一.命令模式</h2><blockquote>
+<p> 可执行操作：可进行光标的移动、文本的复制粘贴、查找文本中的某些关键字、删除文本部分内容、块的选择等</p>
+</blockquote>
+<h3 id="进入模式的方式："><a href="#进入模式的方式：" class="headerlink" title="进入模式的方式："></a>进入模式的方式：</h3><ol>
+<li><p>在提示符后用 Vim xxx   进入 Vim     &#x2F;&#x2F; xxx 为你要打开或者新建的文件名</p>
+</li>
+<li><p>在 <abbr title='下面会讲到'> 编辑模式和底线命令模式 </abbr>时，按 <code>Esc</code> 或者<code>Ctrl</code> + <code>c</code> 或者 <code>Ctrl</code> + <code>[</code> 退出到命令模式</p>
+</li>
+</ol>
+<h3 id="常用按键："><a href="#常用按键：" class="headerlink" title="常用按键："></a>常用按键：</h3><ol>
+<li><p>光标的移动：</p>
+<blockquote>
+<p>注意：</p>
+<p>1.下面所说的<strong>行</strong>是一个回车键与下一个回车键之间的整个内容为一行，不是我们肉眼所看到的真实的<strong>行</strong>，如果分不清可在命令模式下输入 <code>:set nu</code> 使得文本显示行号</p>
+<p>2.以下内容没有写在代码块里的 <strong>N</strong> 是数字 **N **，带有角标的 N<del>1</del>，N<del>2</del> 也是数字；string，string1，string2 是你要操作的字符串</p>
+</blockquote>
+<p><code>h</code>键或者方向 <code>⬅</code> 键 ：向左移动</p>
+<p><code>j</code> 键或者方向 <code>⬇</code>  键： 向下移动</p>
+<p><code>k</code> 键或者方向 <code>⬆</code>  键：向上移动</p>
+<p><code>l</code> 键或者方向 <code> ➡</code> 键：向右移动</p>
+<p>&#x2F;&#x2F;高阶：向某个方向移动N行，例如向下移动30行：按<code>30j</code>或者 <code>30⬇</code> 即可</p>
+<p><code>Ctrl</code> + <code>f</code> 键或者 <code>Page Down</code> 键：屏幕向下移动一页</p>
+<p><code>Ctrl</code> + <code>b</code> 键或者   <code>Page Up</code>   键：屏幕向上移动一页</p>
+<p><code>Ctrl</code> + <code>d</code> 键：屏幕向下移动半页</p>
+<p><code>Ctrl</code> + <code>u</code> 键：屏幕向上移动半页</p>
+<p><code>+</code> 键：光标移动到下一行的非空格符</p>
+<p><code>-</code> 键：光标移动到上一行的非空格符</p>
+<p><code>0</code> 或者 <code>Home</code> 键：光标移动到当前所在行的第一列</p>
+<p><code>^</code> 键：光标移动到当前所在行的第一个非空字符上</p>
+<p><code>$</code> 或者  <code>End</code>  键：光标移动到当前所在行的最后一列</p>
+<p><code>w</code> 或者 <code>W</code> 键 ： 光标移动到下一个字符串或者特殊符号<a href="%5B%E8%BF%99%E4%B8%AA%E6%A6%82%E5%BF%B5%E5%BE%88%E5%B9%BF%E4%B9%89%EF%BC%8C%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E8%AF%A5%E6%80%8E%E4%B9%88%E5%BD%A2%E5%AE%B9%E9%82%A3%E4%BA%9B%E7%AC%A6%E5%8F%B7%5D">^1</a>的开头</p>
+<p><code>e</code> 或者 <code>E</code> 键 ： 光标移动到下一个字符串或者特殊符号的结尾</p>
+<p><code>b</code> 或者 <code>B</code> 键 ： 光标移动到上一个字符串或者特殊符号的开头</p>
+<blockquote>
+<hr>
+<p>这几个键⬇️好像不是那么一回事。也许是我的版本问题吧。</p>
+</blockquote>
+<p><code>H</code> 键：光标移动到当前屏幕上显示的最上方的那一行的第一个非空格字符   </p>
+<p><code>M</code> 键：光标移动到当前屏幕上显示的中间一行的第一个非空格字符</p>
+<p><code>L</code> 键：光标移动到当前屏幕上显示的最下方的那一行的第一个非空格字符</p>
+<blockquote>
+<p>这几个键⬆️只是会把光标移动到目标的区域附近而已</p>
+</blockquote>
+<hr>
+<p><code>G</code> 键：光标移动到文本的最后一行的第一个非空格字符</p>
+<p>N + <code>G</code> 键：光标移动到文本的第 N 行的第一个非空格字符</p>
+<p>N + <code>gg</code> ：  光标移动到文本的第 N 行的第一个非空格字符</p>
+<p>N ＋ <code>空格</code> 键：光标会向后移动到（若当前光标所在列为第 n 列）第 n+N 列</p>
+<p><code>gg</code> ：光标移动到文本的第一行的第一个非空字符，相当于 <code>1G</code> 命令</p>
+<p>N + <code>Enter</code> 键：光标向下移动到（若当前光标所在行为第 n 行）n + N 行的第一个非空格字符</p>
+</li>
+<li><p>字符串的查找与替换（只会模糊匹配字符串）              &#x2F;&#x2F;记得在字符串后加个回车键<br><code>/string</code> ：向下查找 <code>string</code> 字符串，光标停留在光标以下部分找到的第一个  <code>string</code></p>
+<p><code>?string</code> ：向上查找 <code>string</code> 字符串，光标停留在光标以上部分找到的第一个  <code>string</code></p>
+<p><code>n</code> 键：重复前一个查找的操作</p>
+<p><code>N</code> 键：反方向进行前一个查找操作</p>
+<blockquote>
+<p># 在 N<del>1</del> 与 N<del>2</del> 行之间查找 string1，并用 string2 替换掉 string1</p>
+<p>:N<del>1</del>,N<del>2</del>s&#x2F;string1&#x2F;string2&#x2F;g </p>
+</blockquote>
+<blockquote>
+<p># 从文本第一行到文本最后一行查找 string1 ，并用 string2 替换掉 string1</p>
+<p>:1,$s&#x2F;string1&#x2F;string2&#x2F;g</p>
+</blockquote>
+<blockquote>
+<p>#  从文本第一行到文本最后一行查找 string1 ，并提示是否用 string2 替换掉 string1</p>
+<p>:1,$s&#x2F;string1&#x2F;string2&#x2F;gc</p>
+</blockquote>
+<p><code>:%s/^/string/g </code>  :在每一行的行首插入 string，^表示行首。</p>
+<p><code>:%s/$/string/g</code>  : 在每一行的行尾插入 string，$表示行尾。</p>
+</li>
+<li><p>文本部分内容的删除及复制和粘贴</p>
+<p><code>x</code> 键：删除光标所占的字符</p>
+<p><code>X</code> 键：删除光标的前一个字符</p>
+<p>N + <code>x</code> 键：从当前所占字符开始向后删除 N 个字符</p>
+<p><code>dd</code> ：删除光标所在行</p>
+<p>N + <code>dd</code> ：删除从光标所在行开始向下的 N 行</p>
+<p><code>d1G</code> ：删除从文本第一行开始至光标所在行的所有内容</p>
+<p><code>dG</code> ：删除从光标所在行到文本最后一行的所有内容</p>
+<p><code>d$</code> ：删除从光标所在处到所在行的最后一个字符（不包括回车符）</p>
+<p><code>d0</code> ：删除从所在行第一个字符到光标所占字符前的所有内容</p>
+<p><code>yy</code> ：复制光标所在行</p>
+<p>N + <code>yy</code> ：从光标所在行开始向下复制 N 行</p>
+<p><code>y1G</code> ：复制从光标所在行至文本第一行的所有内容</p>
+<p><code>yG</code> ：复制从光标所在行至文本最后一行的所有内容</p>
+<p><code>y0</code> ：复制所在行第一列到光标所在列前的所有内容（粘贴时，在光标所占字符后开始插入内容）</p>
+<p><code>y$</code> ：复制光标所在列到所在行最后一列的所有内容（粘贴时，在光标所占字符后开始插入内容）</p>
+<p> <code>p</code> 键：将已复制的内容在光标所在行与下一行之间插入</p>
+<p><code>P</code> 键：将已复制的内容在光标所在行与上一行之间插入 </p>
+<p><code>J</code> 键：将所在行的回车键删除</p>
+<p><code>c</code> 键：删除多行，例如删除从光标所在行往下的10行 -&gt;       <code>10cj</code></p>
+<p><code>u</code> 键：恢复执行上一个操作时的状态</p>
+<p><code>.</code> 键：重复上一个删除、粘贴的操作</p>
+</li>
+</ol>
+<h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><blockquote>
+<p>可执行操作：编辑文本</p>
+</blockquote>
+<p># 注意看 Vim 界面左下角，—INSERT— 为文本插入模式，—REPLACE—为文本替换模式</p>
+<p># 按 <code>Ins</code> 键可在文本编辑模式和文本插入模式之间切换</p>
+<h3 id="进入模式的方式：-1"><a href="#进入模式的方式：-1" class="headerlink" title="进入模式的方式："></a>进入模式的方式：</h3><p>在命令模式中按 <code>i</code> 、<code>I</code> 、<code>a</code>、<code>A</code>、<code>o</code>、<code>O</code>、<code>r</code>、<code>R</code> 中一个键即可进入</p>
+<h3 id="常用按键：-1"><a href="#常用按键：-1" class="headerlink" title="常用按键："></a>常用按键：</h3><ol>
+<li>文本插入模式</li>
+</ol>
+<p><code>i</code> 键：从当前所占字符前开始插入字符</p>
+<p><code>a</code> 键：从当前所占字符后开始插入字符</p>
+<p><code>o</code> 键：在当前所在行的下一行插入一行空白行</p>
+<p><code>I</code> 键：在光标所在行的第一个非空格字符前开始插入字符</p>
+<p><code>A</code> 键：在光标所在行的最后一个字符后开始插入字符</p>
+<p><code>O</code> 键：在当前所在行的上一行插入一行空白行</p>
+<blockquote>
+<p>有个小技巧，进入文本编辑模式之前，按下一个 数字 N，再按以上的六个键中的一个进入文本编辑模式，然后输入你想输入的字符串或值，然后退回到命令模式，你就发现 vim 帮你重复了 N 次你刚才输入的字符串或者值。</p>
+</blockquote>
+<p><code>gi</code> ：快速跳转到你上次在本文档中编辑的位置，并进入插入模式</p>
+<ol start="2">
+<li>文本替换模式</li>
+</ol>
+<p><code>r</code> 键：只会替换光标所在字符一次，随后自动退出到命令模式</p>
+<p><code>R</code> 键：一直替换光标所在字符，按 <code>Esc</code> 键退出到命令模式，</p>
+<h2 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h2><blockquote>
+<p>可执行操作：显示行号、保存文本、退出 Vim等</p>
+</blockquote>
+<h3 id="进入模式的方法："><a href="#进入模式的方法：" class="headerlink" title="进入模式的方法："></a>进入模式的方法：</h3><ol>
+<li>在命令模式下按 <code>:</code>  键</li>
+<li>在命令模式下按 <code>/</code>  键</li>
+<li>在命令模式下按 <code>？</code>  键</li>
+</ol>
+<h3 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h3><blockquote>
+<p># 这里的命令是在按 <code>:</code> 键进入底线命令模式后操作的，记得在命令最后加个回车键</p>
+<p># 有些命令需要确保你有权限修改文件，再执行以下命令</p>
+</blockquote>
+<p><code>wq</code> ：保存文本并退出</p>
+<p><code>q!</code> ：不保存文本并退出</p>
+<p><code>set nu</code> ：显示文本行号</p>
+<p><code>set nonu</code> ：不显示行号</p>
+<p><code>w</code> ：将编辑的数据写入硬盘文件中</p>
+<p><code>q</code> ：离开 Vim </p>
+<p><code>ZZ</code> ：保存后离开。（不用进入底线命令模式，直接在命令模式按 ZZ 即可保存退出）</p>
+<p><code>w[file1]</code> ：将编辑的数据保存到 file1 ，若没有 file1 ，Vim 会自动建好文件</p>
+<p><code>r[file1]</code> ： 在编辑一个文本时，在光标所在行的下一行插入 file1 的文本内容</p>
+<blockquote>
+<p># 将 N<del>1</del> 到 N<del>2</del> 行的内容保存为 file1 这个文本</p>
+<p>:N<del>1</del>,N<del>2</del> w [file1] </p>
+</blockquote>
+<p><code>!command</code> ：跳出 vim 执行命令 <code>command</code> ，命令执行结束后，按任意键回到 Vim</p>
+<p>参考：《鸟哥的 Linux 私房菜》第三版</p>
+<p>[这个概念很广义，我不知道该怎么形容那些符号]:</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2020/08/11/%E5%9C%A8Linux%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E6%9D%A5%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C/">在 Linux 和 Git 中使用别名来更高效的工作<span class="note">较早</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body beaudar'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="Higgins995/blog-commets" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="http://www.higgins995.top/">@Higgins995</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

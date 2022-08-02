@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>搭建博客的过程与感受 - Higgins995</title>
+
+  
+    <meta name="description" content="时间线2020.06.18​		公布考核内容后，我就开始磨洋工，慢慢地看壮艺学长推的一篇博文，听说该博文的博主TRHX是叶学长的一个朋友。我后来通过TRHX的博客成功搭建了我的博客主页，其中还遇到了bash: clip: command not found等一些错误，了解了一些关于环境变量的知识。Ps：期间我还放下hexo，自己搭建了个科学上网的S✈R也是到处碰壁啊，虽然过程艰难，但最后还是拥有了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建博客的过程与感受">
+<meta property="og:url" content="http://www.higgins995.top/2020/08/06/%E6%90%AD%E5%BB%BAHexo%E7%9A%84%E6%84%9F%E5%8F%97/index.html">
+<meta property="og:site_name" content="Higgins995">
+<meta property="og:description" content="时间线2020.06.18​		公布考核内容后，我就开始磨洋工，慢慢地看壮艺学长推的一篇博文，听说该博文的博主TRHX是叶学长的一个朋友。我后来通过TRHX的博客成功搭建了我的博客主页，其中还遇到了bash: clip: command not found等一些错误，了解了一些关于环境变量的知识。Ps：期间我还放下hexo，自己搭建了个科学上网的S✈R也是到处碰壁啊，虽然过程艰难，但最后还是拥有了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-24T04:31:14.119Z">
+<meta property="article:author" content="Higgins995">
+<meta property="article:tag" content="闲聊">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//ICO/school.ico">
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//WebSite/profile.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Higgins995</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/more/">更多</a></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-06-18"><span class="toc-text">2020.06.18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-06-25"><span class="toc-text">2020.06.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-08-01"><span class="toc-text">2020.08.01</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2020-08-07"><span class="toc-text">2020.08.07</span></a></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-08-05T16:00:00.000Z">2020-08-06</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>搭建博客的过程与感受</span></h1>
+<h1 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h1><h2 id="2020-06-18"><a href="#2020-06-18" class="headerlink" title="2020.06.18"></a>2020.06.18</h2><p>​		公布考核内容后，我就开始磨洋工，慢慢地看<a target="_blank" rel="noopener" href="https://zy68.top/">壮艺学长</a>推的一篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/82121420">博文</a>，听说该博文的博主<a target="_blank" rel="noopener" href="https://www.itrhx.com/">TRHX</a>是<a target="_blank" rel="noopener" href="https://shansan.top/">叶学长</a>的一个朋友。我后来通过TRHX的博客成功搭建了我的<a href="www.higgins995.top">博客主页</a>，其中还遇到了<strong>bash: clip: command not found</strong>等一些错误，了解了一些关于环境变量的知识。Ps：期间我还放下hexo，自己搭建了个科学上网的S✈R也是到处碰壁啊，虽然过程艰难，但最后还是拥有了自己的第一个加速器😊</p>
+<hr>
+<h2 id="2020-06-25"><a href="#2020-06-25" class="headerlink" title="2020.06.25"></a>2020.06.25</h2><p>​		博客搭建成功后，我使用过一段时间JerryC的<a target="_blank" rel="noopener" href="https://jerryc.me/">hexo-theme-butterfly</a>主题,个性化了很多自己喜欢的东西，比如修改网页背景，添加valine评论，添加aplayer等等（毕竟谁不想把自己的博客搞得<u>逼格🚀高一点呢</u>）而这些在butterfly主题上大都内置了，所以还不算有难度。</p>
+<hr>
+<h2 id="2020-08-01"><a href="#2020-08-01" class="headerlink" title="2020.08.01"></a>2020.08.01</h2><p>​		有一次不知道自己修改了什么，导致<strong>部署</strong>后主页空白（之前也有过很多次，但都解决了），这次我直接甩手，干脆了换了个主题，换成了现在的Fan主题，我就自己添加了音乐播放器，这也是对自己最满意😊的地方。可以说我掌握了如何在博客上添加Aplayer（别喷，我是菜鸡）。之后我自己会在这个主题上添加localsearch的（主题开发者说他还没有添加到主题里）。</p>
+<p>​		看了好久，终于看懂了站点配置文件config.yml和主题配置文件的config.yml大部分内容，而对于怎么修改.js,我没学过，在哪插入&lt;div&gt;  &lt;script&gt; &lt;&#x2F;script&gt;,添加的时候要不要缩进，怎么缩进，我都一无所知，因为之前在个性化主题的时候，经常报错，搞得我心态炸了，又觉得自己还没有时间学HTML，也就放下了继续修改的念头，不过先把话放在这了，我明年肯定会学HTML及java的，我就不信到时候还看不懂这些😡</p>
+<hr>
+<h2 id="2020-08-07"><a href="#2020-08-07" class="headerlink" title="2020.08.07"></a>2020.08.07</h2><p>​		今天学了点typora的语法，终于能把这篇丢在角落里的、真正意义上的我的第一篇文章部署到博客了。接下来的日子该沉下心来学习了</p>
+<blockquote>
+<p><u><strong>日不积何以月累</strong></u></p>
+</blockquote>
+<hr>
+<h1 id="自己的感受："><a href="#自己的感受：" class="headerlink" title="自己的感受："></a>自己的感受：</h1><ul>
+<li>在这两个月里，学到了不少，也在大佬们的博客里了解到了很多我从未听说的知识，而我也想像他们一样吸取这些博大精深的知识。学无止境。</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><u><strong>学如逆水行舟，不进则退</strong></u></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>对于新手来说，如果你有其他重要的事，请先不要把大量的时间投入到博客的美化中，一个博客拥有一些归档，分类，关于页面，评论就基本可以了，其他的先不要急，日后可以一步一步来。不过还是放不下对主题的个性化，做不出想要的样子，心里真的想继续弄​😣:。<del>现在的自己还没有看过Markdown的基本语法</del><a href="2020.08.07%E7%9C%8B%E4%BA%86%E5%A4%A7%E8%87%B4%E7%9A%84%E8%AF%AD%E6%B3%95">^1</a>，没有学会git的用法，而linux好久没看了，C的指针内容还没看，这个暑假好忙。</p>
+</li>
+<li><ul>
+<li>还有就是现在坐在电脑前，时不时就有三四根头发掉在键盘上，一天十几根​，​好可怕 😨， 挺住，🙏别秃了</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>最后推一首我喜欢的一首歌</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2020/08/08/Markdown%E7%AC%94%E8%AE%B0%E4%B9%8B%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Markdown语法笔记<span class="note">较新</span></a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body beaudar'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="Higgins995/blog-commets" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="http://www.higgins995.top/">@Higgins995</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
