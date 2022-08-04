@@ -574,7 +574,7 @@ pre .coffeescript .title {
   outline: none;
 }
 html {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: HarmonyOS_Regular;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2981,7 +2981,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-weight: 900;
   color: inherit;
   line-height: 1.2;
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: HarmonyOS_Regular;
   display: block;
   position: relative;
 }

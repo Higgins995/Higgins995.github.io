@@ -21,12 +21,12 @@
   <title>在 Linux 和 Git 中使用别名来更高效的工作 - Higgins995</title>
 
   
-    <meta name="description" content="​					 	Linux 和 Git 中分别设置及删除别名的方法 ​		前言：今天在慕课网上继续学习 Linux ，学到了“使用别名与快捷键” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令:anger:），敢想敢做，我马上打开电脑干了起来">
+    <meta name="description" content="​					 	Linux 和 Git 中分别设置及删除别名的方法 ​		前言：今天在慕课网上继续学习 Linux ，学到了“使用别名与快捷键” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令💢），敢想敢做，我马上打开电脑干了起来">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Linux 和 Git 中使用别名来更高效的工作">
 <meta property="og:url" content="http://www.higgins995.top/2020/08/11/%E5%9C%A8Linux%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%AB%E5%90%8D%E6%9D%A5%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C/">
 <meta property="og:site_name" content="Higgins995">
-<meta property="og:description" content="​					 	Linux 和 Git 中分别设置及删除别名的方法 ​		前言：今天在慕课网上继续学习 Linux ，学到了“使用别名与快捷键” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令:anger:），敢想敢做，我马上打开电脑干了起来">
+<meta property="og:description" content="​					 	Linux 和 Git 中分别设置及删除别名的方法 ​		前言：今天在慕课网上继续学习 Linux ，学到了“使用别名与快捷键” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令💢），敢想敢做，我马上打开电脑干了起来">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/13/C1MdeyPUN3pg5jH.jpg">
 <meta property="og:image" content="https://i.loli.net/2020/08/13/mHMnQarZwzsb5kp.jpg">
@@ -77,11 +77,11 @@
 <header class="header">
 
 <div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//WebSite/profile.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Higgins995</div><div class="sub normal cap">求知若渴 虚心若愚</div><div class="sub hover cap" style="opacity:0">读万卷书 行万里路</div></a></div>
-<nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/comments/">留言</a><a class="nav-item" href="/about/">更多</a></nav></header>
+<nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/wiki/">算法专栏</a><a class="nav-item" href="/comments/">留言</a><a class="nav-item" href="/about/">更多</a></nav></header>
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-Linux-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="toc-text">在 Linux 中设置别名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D%EF%BC%9A"><span class="toc-text">设置永久别名：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%B4%E6%97%B6%E5%88%AB%E5%90%8D%EF%BC%9A"><span class="toc-text">设置临时别名：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4-Linux-%E4%B8%AD%E7%9A%84%E5%88%AB%E5%90%8D"><span class="toc-text">删除 Linux 中的别名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D"><span class="toc-text">删除永久别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%B4%E6%97%B6%E5%88%AB%E5%90%8D"><span class="toc-text">删除临时别名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-Git-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D"><span class="toc-text">在 Git 中设置永久别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4-Git-%E4%B8%AD%E7%9A%84%E5%88%AB%E5%90%8D"><span class="toc-text">删除 Git 中的别名</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-linux-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="toc-text"> 在 Linux 中设置别名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D"><span class="toc-text"> 设置永久别名：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%B4%E6%97%B6%E5%88%AB%E5%90%8D"><span class="toc-text"> 设置临时别名：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4-linux-%E4%B8%AD%E7%9A%84%E5%88%AB%E5%90%8D"><span class="toc-text"> 删除 Linux 中的别名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D"><span class="toc-text"> 删除永久别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%B4%E6%97%B6%E5%88%AB%E5%90%8D"><span class="toc-text"> 删除临时别名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-git-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E5%88%AB%E5%90%8D"><span class="toc-text"> 在 Git 中设置永久别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4-git-%E4%B8%AD%E7%9A%84%E5%88%AB%E5%90%8D"><span class="toc-text"> 删除 Git 中的别名</span></a></li></ol></div></div></div>
 
 
 </div>
@@ -98,56 +98,51 @@
 <article class='content md post'>
 <h1 class="article-title"><span>在 Linux 和 Git 中使用别名来更高效的工作</span></h1>
 <p>​					 	<em><strong>Linux 和 Git 中分别设置及删除别名的方法</strong></em></p>
-<p>​		前言：今天在<a target="_blank" rel="noopener" href="https://class.imooc.com/">慕课网</a>上继续学习 Linux ，学到了“<a target="_blank" rel="noopener" href="https://www.imooc.com/video/4526">使用别名与快捷键</a>” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令:anger:），敢想敢做，我马上打开电脑干了起来</p>
+<p>​		前言：今天在<a target="_blank" rel="noopener" href="https://class.imooc.com/">慕课网</a>上继续学习 Linux ，学到了“<a target="_blank" rel="noopener" href="https://www.imooc.com/video/4526">使用别名与快捷键</a>” 这个内容，然后我突然想起 Git 和 Linux 的终端不是很相似吗？那我是不是也可以在 Git 上使用别名（还不是因为每次折腾一下博客，都需要输入长长的命令💢），敢想敢做，我马上打开电脑干了起来</p>
 <span id="more"></span> 
-
-<p>​					</p>
-<h1 id="Linux-部分"><a href="#Linux-部分" class="headerlink" title="Linux 部分"></a>Linux 部分</h1><p>​		设置别名分为两种情况：一种是临时别名，只限本次登陆使用；另一种是永久别名，可永久使用这个别名。</p>
+<p>​</p>
+<h1 id="linux-部分"><a class="markdownIt-Anchor" href="#linux-部分"></a> Linux 部分</h1>
+<p>​		设置别名分为两种情况：一种是临时别名，只限本次登陆使用；另一种是永久别名，可永久使用这个别名。</p>
 <p># 你都想用别名了，说明你已经掌握基本的 Linux 知识了，有些图我就不上了</p>
-<p># 这里只介绍为 linux 单个用户设置别名的方法，若想为 Linux 所有用户设置别名，请把以下所有方法（仅 Linux 部分）的 <code>~/.bashrc</code> 环境变量配置文件[^1]换成 <code>/etc/profile</code> 全系统配置文件        </p>
-<p>[^1]: 若想了解 Linux 的环境配置文件，可前往<a target="_blank" rel="noopener" href="https://blog.csdn.net/flw8840488/article/details/90513873"> Linux 更改用户环境变量和所有用户环境变量</a> 了解    </p>
-<h2 id="在-Linux-中设置别名"><a href="#在-Linux-中设置别名" class="headerlink" title="在 Linux 中设置别名"></a>在 Linux 中设置别名</h2><h3 id="设置永久别名："><a href="#设置永久别名：" class="headerlink" title="设置永久别名："></a>设置永久别名：</h3><p>第一步：用 vim 打开 .bashrc 环境变量配置文件</p>
+<p># 这里只介绍为 linux 单个用户设置别名的方法，若想为 Linux 所有用户设置别名，请把以下所有方法（仅 Linux 部分）的 <code>~/.bashrc</code> 环境变量配置文件<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>换成 <code>/etc/profile</code> 全系统配置文件</p>
+<h2 id="在-linux-中设置别名"><a class="markdownIt-Anchor" href="#在-linux-中设置别名"></a> 在 Linux 中设置别名</h2>
+<h3 id="设置永久别名"><a class="markdownIt-Anchor" href="#设置永久别名"></a> 设置永久别名：</h3>
+<p>第一步：用 vim 打开 .bashrc 环境变量配置文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#终端命令：</span><br><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
 <p>第二步：添加alias命令格式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#格式:</span><br><span class="line">alias x=&#x27;xxxx&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>​		文件自己都有实例在那了:arrow_down:</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/C1MdeyPUN3pg5jH.jpg"></p>
+<p>​		文件自己都有实例在那了⬇️</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/C1MdeyPUN3pg5jH.jpg" alt="" /></p>
 <p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#终端命令:</span><br><span class="line">source ~/.bashrc     #读入.bashrc文件</span><br><span class="line"></span><br><span class="line">#或者</span><br><span class="line">reboot				 #重启Linux</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="设置临时别名："><a href="#设置临时别名：" class="headerlink" title="设置临时别名："></a>设置临时别名：</h3><p>第一步：查看要设置的别名是否已存在</p>
+<h3 id="设置临时别名"><a class="markdownIt-Anchor" href="#设置临时别名"></a> 设置临时别名：</h3>
+<p>第一步：查看要设置的别名是否已存在</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#终端命令：</span><br><span class="line">alias</span><br></pre></td></tr></table></figure>
-
 <p>第二步：添加别名</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#格式:</span><br><span class="line"></span><br><span class="line">alias x=&#x27;xxxx&#x27;          //终端命令</span><br><span class="line"></span><br><span class="line"># `xxxx` 代表你要替换的命令， `x` 代表你要设置的命令别名</span><br></pre></td></tr></table></figure>
-
 <p>​		还是看图吧</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/mHMnQarZwzsb5kp.jpg"></p>
-<hr>
-<h2 id="删除-Linux-中的别名"><a href="#删除-Linux-中的别名" class="headerlink" title="删除 Linux 中的别名"></a>删除 Linux 中的别名</h2><h3 id="删除永久别名"><a href="#删除永久别名" class="headerlink" title="删除永久别名"></a>删除永久别名</h3><p>第一步：用 vim 打开 .bashrc 环境变量配置文件（一般的别名设置信息在这里面）</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/mHMnQarZwzsb5kp.jpg" alt="" /></p>
+<hr />
+<h2 id="删除-linux-中的别名"><a class="markdownIt-Anchor" href="#删除-linux-中的别名"></a> 删除 Linux 中的别名</h2>
+<h3 id="删除永久别名"><a class="markdownIt-Anchor" href="#删除永久别名"></a> 删除永久别名</h3>
+<p>第一步：用 vim 打开 .bashrc 环境变量配置文件（一般的别名设置信息在这里面）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#终端命令：</span><br><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
 <p>第二步：删除所要删除的别名所在行</p>
 <p>第三步：重启 Linux 或者读入 .bashrc 环境变量配置文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#终端命令:</span><br><span class="line">source ~/.bashrc     #读入.bashrc文件</span><br><span class="line"></span><br><span class="line">#或者</span><br><span class="line">reboot				 #重启Linux</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="删除临时别名"><a href="#删除临时别名" class="headerlink" title="删除临时别名"></a>删除临时别名</h3><p>在终端使用 unalias 命令删除：</p>
+<h3 id="删除临时别名"><a class="markdownIt-Anchor" href="#删除临时别名"></a> 删除临时别名</h3>
+<p>在终端使用 unalias 命令删除：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#格式</span><br><span class="line">unalias x     // x 为你要删除的别名(unalias -a 可删除所有别名)</span><br></pre></td></tr></table></figure>
-<p>————————————— Linux ———————————————————</p>
-<h1 id="Git-部分"><a href="#Git-部分" class="headerlink" title="Git 部分"></a>Git 部分</h1><p># 这是我自己从 Linux 中摸索出来的</p>
+<p>--------------------------------------- Linux ---------------------------------------------------------</p>
+<h1 id="git-部分"><a class="markdownIt-Anchor" href="#git-部分"></a> Git 部分</h1>
+<p># 这是我自己从 Linux 中摸索出来的</p>
 <p>#官方还有一个设置别名的方法，详细内容请看<a target="_blank" rel="noopener" href="https://www.progit.cn/#_git_aliases"> Git 别名</a></p>
-<h2 id="在-Git-中设置永久别名"><a href="#在-Git-中设置永久别名" class="headerlink" title="在 Git 中设置永久别名"></a>在 Git 中设置永久别名</h2><p>第一步：用 vi 打开 Git 的 bash.bashrc 环境变量配置文件</p>
-<p>​			运行 <code>Git Bash</code>，输入：<code>vi /etc/bash.bashrc</code><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813181539.png"></p>
+<h2 id="在-git-中设置永久别名"><a class="markdownIt-Anchor" href="#在-git-中设置永久别名"></a> 在 Git 中设置永久别名</h2>
+<p>第一步：用 vi 打开 Git 的 bash.bashrc 环境变量配置文件</p>
+<p>​			运行 <code>Git Bash</code>，输入：<code>vi /etc/bash.bashrc</code><br />
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813181539.png" alt="" /></p>
 <p>​			命令结果:</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813182626.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813182626.png" alt="" /></p>
 <p>第二步：添加别名</p>
 <ul>
 <li>按大写的字母 <code>O</code> 键，并输入：</li>
@@ -155,26 +150,36 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#格式</span><br><span class="line"># xxxx 代表你要替换的命令， x 代表你要设置的命令别名</span><br><span class="line">alias x=&#x27;xxxx&#x27;       </span><br></pre></td></tr></table></figure>
 <p>​			例如，我输入的是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias G=&#x27;hexo g&#x27;</span><br><span class="line">alias D=&#x27;hexo clean &amp;&amp; hexo g -d&#x27;</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813183042.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813183042.png" alt="" /></p>
 <ul>
 <li>按 <code>Esc</code> 键（怕出错可以多按几次），然后按 <code>:</code> 键进入底线命令模式（注意是按英文的冒号键），并输入：<code>wq</code></li>
 </ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185711.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185711.png" alt="" /></p>
 <p>第三步：读入 bash.bashrc 文件</p>
 <p>​			输入：<code>source /etc/bash.bashrc</code></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185848.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Higgins995/The-Photos-of-Blog//0820200813185848.png" alt="" /></p>
 <p>​			效果图：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/DijdEbsrUVgePNS.jpg"></p>
-<h2 id="删除-Git-中的别名"><a href="#删除-Git-中的别名" class="headerlink" title="删除 Git 中的别名"></a>删除 Git 中的别名</h2><p>​				若想删除别名，把你在 bash.bashrc 中设置的别名所在行删除即可</p>
-<p>—————————————Git ————————————————————</p>
-<h1 id="附：命令生效顺序"><a href="#附：命令生效顺序" class="headerlink" title="附：命令生效顺序"></a>附：命令生效顺序</h1><p>第一顺位：用绝对或相对路径执行的命令</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2020/08/13/DijdEbsrUVgePNS.jpg" alt="" /></p>
+<h2 id="删除-git-中的别名"><a class="markdownIt-Anchor" href="#删除-git-中的别名"></a> 删除 Git 中的别名</h2>
+<p>​				若想删除别名，把你在 bash.bashrc 中设置的别名所在行删除即可</p>
+<p>---------------------------------------Git ------------------------------------------------------------</p>
+<h1 id="附命令生效顺序"><a class="markdownIt-Anchor" href="#附命令生效顺序"></a> 附：命令生效顺序</h1>
+<p>第一顺位：用绝对或相对路径执行的命令</p>
 <p>第二顺位：别名</p>
 <p>第三顺位：Bash的内部命令</p>
 <p>第四顺位：按照 $PATH 环境变量定义的目录查找顺序找到的第一个命令</p>
-<hr>
+<hr />
 <p>注：以上就是本文所要讲述的内容，如有不足之处，欢迎指正。</p>
-<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://www.imooc.com/video/4526">使用别名与快捷键</a></p>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考：</h1>
+<p><a target="_blank" rel="noopener" href="https://www.imooc.com/video/4526">使用别名与快捷键</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/AGNING/article/details/105902635">Hexo设置命令别名快捷命令</a></p>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>若想了解 Linux 的环境配置文件，可前往<a target="_blank" rel="noopener" href="https://blog.csdn.net/flw8840488/article/details/90513873"> Linux 更改用户环境变量和所有用户环境变量</a> 了解 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
@@ -206,8 +211,8 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/comments/">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/Higgins995/">GitHub</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-<p>本站由 <a href="http://www.higgins995.top/">@Higgins995</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">专栏</span><a href="/wiki/algorithm">算法</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a><a href="/comments/">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于我</a><a target="_blank" rel="noopener" href="https://github.com/Higgins995/">GitHub</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="http://www.higgins995.top/">@Higgins995</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题，您可以在 <a target="_blank" rel="noopener" href="https://github.com/Higgins995/Higgins995.github.io/">GitHub</a> 找到本站源码。</p>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
