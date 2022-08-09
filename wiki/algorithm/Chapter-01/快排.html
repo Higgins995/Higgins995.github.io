@@ -18,18 +18,18 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Algorithm：第一章--基础算法 - Higgins995</title>
+  <title>algorithm：快速排序 - Higgins995</title>
 
   
-    <meta name="description" content="网页建设中……">
+    <meta name="description" content="题目说明  伪代码（具体实现见模板2）   Quicksort(f, l)  Input: 	af , af+1 , …, al . Output: af ,af+1 , …, al 的有序序列 ​		If f &gt;&#x3D; 1 then Return ​			X :&#x3D; af ​			i :&#x3D; f ​			j :&#x3D; l ​			While i &lt; j do ​			Begin ​				Wh">
 <meta property="og:type" content="website">
-<meta property="og:title" content="第一章--基础算法">
-<meta property="og:url" content="http://www.higgins995.top/wiki/algorithm/Chapter-01/">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://www.higgins995.top/wiki/algorithm/Chapter-01/%E5%BF%AB%E6%8E%92.html">
 <meta property="og:site_name" content="Higgins995">
-<meta property="og:description" content="网页建设中……">
+<meta property="og:description" content="题目说明  伪代码（具体实现见模板2）   Quicksort(f, l)  Input: 	af , af+1 , …, al . Output: af ,af+1 , …, al 的有序序列 ​		If f &gt;&#x3D; 1 then Return ​			X :&#x3D; af ​			i :&#x3D; f ​			j :&#x3D; l ​			While i &lt; j do ​			Begin ​				Wh">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-04T08:47:57.051Z">
-<meta property="article:modified_time" content="2022-08-04T08:47:57.051Z">
+<meta property="article:published_time" content="2022-08-09T16:21:50.873Z">
+<meta property="article:modified_time" content="2022-08-09T16:21:50.873Z">
 <meta property="article:author" content="Higgins995">
 <meta name="twitter:card" content="summary">
   
@@ -78,12 +78,12 @@
 
 <header class="header">
 
-<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/algorithm/"><div class="main">Algorithm</div></a></div>
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/algorithm/"><div class="main">算法习题</div><div class="sub normal cap">日不积何以月累</div><div class="sub hover cap" style="opacity:0">Designed by Higgins995</div></a></div>
 </header>
 
 <div class="widgets">
 
-<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/algorithm/"><span class="toc-text">算法习题</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/algorithm/Chapter-01/"><span class="toc-text">第一章--基础算法</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/algorithm/Chapter-02/"><span class="toc-text">第二章--数据结构</span></a></div></div></div>
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">基础算法</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/algorithm/Chapter-01/%E5%BF%AB%E6%8E%92.html"><span class="toc-text">快速排序</span></a><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E8%AF%B4%E6%98%8E"><span class="toc-text"> 题目说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0%E8%A7%81%E6%A8%A1%E6%9D%BF2"><span class="toc-text"> 伪代码（具体实现见模板2）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text"> Quicksort(f, l) </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8E%92%E6%A8%A1%E6%9D%BF1%E4%BC%98%E7%BE%8E%E7%89%88"><span class="toc-text"> 快排模板1（优美版）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8E%92%E6%A8%A1%E6%9D%BF2%E7%BB%8F%E5%85%B8%E6%80%9D%E6%83%B3"><span class="toc-text"> 快排模板2（经典思想）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text"> 例题</span></a></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">数据结构</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/algorithm/Chapter-02/KMP.html"><span class="toc-text">KMP算法</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/algorithm/Chapter-02/Trie.html"><span class="toc-text">Trie树</span></a></div></div></div>
 
 
 
@@ -102,31 +102,60 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/algorithm/">Algorithm</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-08-04T08:47:57.051Z">2022-08-04</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/algorithm/">算法习题</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-08-09T16:21:50.873Z">2022-08-10</time></div></div>
 
   <article class='content md wiki'>
-  <h1 class="article-title"><span>第一章--基础算法</span></h1>
-  <p>网页建设中……</p>
+  <h1 class="article-title"><span>快速排序</span></h1>
+  <h3 id="题目说明"><a class="markdownIt-Anchor" href="#题目说明"></a> 题目说明</h3>
+<h3 id="伪代码具体实现见模板2"><a class="markdownIt-Anchor" href="#伪代码具体实现见模板2"></a> 伪代码（具体实现见模板2）</h3>
+<blockquote>
+<h4 align = "center"> Quicksort(f, l) </h4>
+<p>Input: 	a<sub>f</sub> , a<sub>f+1</sub> , …, a<sub>l</sub> .</p>
+<p>Output: a<sub>f</sub> ,a<sub>f+1</sub> , …, a<sub>l</sub> 的有序序列</p>
+<p>​		If f &gt;= 1 then Return</p>
+<p>​			X := a<sub>f</sub></p>
+<p>​			i := f</p>
+<p>​			j := l</p>
+<p>​			While i &lt; j do</p>
+<p>​			Begin</p>
+<p>​				While a<sub>j</sub> &gt;= X do</p>
+<p>​					j := j - 1</p>
+<p>​				a<sub>i</sub> &lt;-&gt; a<sub>j</sub></p>
+<p>​				While a<sub>i</sub> &lt;= X do</p>
+<p>​					i := i + 1</p>
+<p>​				a<sub>i</sub> &lt;-&gt; a<sub>j</sub></p>
+<p>​			End While</p>
+<p>​			Quicksort(f, j - 1)</p>
+<p>​			Quicksort(j + 1, l)</p>
+<p>​		End If</p>
+</blockquote>
+<h3 id="快排模板1优美版"><a class="markdownIt-Anchor" href="#快排模板1优美版"></a> 快排模板1（优美版）</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> nums[], <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// 选取中间值做分隔点</span></span><br><span class="line">    <span class="comment">// i 取 l - 1、j 取 r + 1 是因为要做do-while</span></span><br><span class="line">    <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = nums[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">do</span> ++i; <span class="keyword">while</span> (nums[i] &lt; x); <span class="comment">// while (nums[++i] &lt; x);</span></span><br><span class="line">        <span class="keyword">do</span> --j; <span class="keyword">while</span> (nums[j] &gt; x); <span class="comment">// while (nums[--j] &gt; x);</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(nums[i], nums[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(nums, l, j), <span class="built_in">quick_sort</span>(nums, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="快排模板2经典思想"><a class="markdownIt-Anchor" href="#快排模板2经典思想"></a> 快排模板2（经典思想）</h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;nums, <span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l + <span class="number">1</span> &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// 选取数组第一个元素做分隔点</span></span><br><span class="line">    <span class="type">int</span> first = l, last = r - <span class="number">1</span>, key = nums[first]; <span class="comment">// 交换步骤1</span></span><br><span class="line">    <span class="keyword">while</span> (first &lt; last) &#123;</span><br><span class="line">        <span class="keyword">while</span>(first &lt; last &amp;&amp; nums[last] &gt;= key)</span><br><span class="line">            --last;</span><br><span class="line">        nums[first] = nums[last]; <span class="comment">// 交换步骤2</span></span><br><span class="line">        <span class="keyword">while</span> (first &lt; last &amp;&amp; nums[first] &lt;= key)</span><br><span class="line">            ++first;</span><br><span class="line">        nums[last] = nums[first]; <span class="comment">// 交换步骤3</span></span><br><span class="line">    &#125;</span><br><span class="line">    nums[first] = key; <span class="comment">// 交换步骤4</span></span><br><span class="line">    <span class="built_in">quick_sort</span>(nums, l, first);</span><br><span class="line">    <span class="built_in">quick_sort</span>(nums, first + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="例题"><a class="markdownIt-Anchor" href="#例题"></a> 例题</h3>
+<p>[AcWing 785 快速排序（模板题）](<a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/787/">785. 快速排序 - AcWing题库</a>)</p>
 
   
 
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/wiki/algorithm/Chapter-02/">第二章--数据结构<span class="note">下一篇</span></a><div class="line"></div><a id="prev" href="/wiki/algorithm/">算法习题<span class="note">上一篇</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/wiki/algorithm/Chapter-02/KMP.html">KMP算法<span class="note">下一篇</span></a><div class="line"></div><a id="prev" href="/wiki/algorithm/">题库说明<span class="note">上一篇</span></a></section></div>
 
   
 
   <div class='related-wrap md reveal' id="comments">
     <div class='cmt-title cap theme'>
-      快来参与讨论吧
+      <p>评论区仅供交流，有问题请提 <a target="_blank" rel="noopener" href="https://github.com/higgins995/blog-comments/issues">issue</a> 反馈。</p>
+
     </div>
     <div class='cmt-body beaudar'>
       
 
 <svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
 
-<div id="beaudar" repo="Higgins995/blog-commets" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+<div id="beaudar" repo="higgins995/blog-comments/" issue-term="Q & A" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
 
     </div>
   </div>
